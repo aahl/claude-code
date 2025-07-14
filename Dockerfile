@@ -21,4 +21,6 @@ VOLUME /npm-cache
 ENV npm_config_cache=/npm-cache
 ENV SHELL=/bin/bash
 
+ADD run.sh /
+ENTRYPOINT ["/run.sh"]
 CMD ["claude"]
