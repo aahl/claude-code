@@ -10,7 +10,7 @@ docker run --rm -it -v "$(pwd):/app" -e ANTHROPIC_AUTH_TOKEN="$ANTHROPIC_AUTH_TO
 Add this alias to your shell configuration (.bashrc, .zshrc, etc.) for quick access:
 ```bash
 export ANTHROPIC_AUTH_TOKEN=sk-xxxx
-alias claude='docker run --rm -it -v "$(pwd):/app" -e ANTHROPIC_AUTH_TOKEN="$ANTHROPIC_AUTH_TOKEN" ghcr.io/aahl/claude-code'
+alias claude='docker run --rm -it -v "$(pwd):/app" -e ANTHROPIC_AUTH_TOKEN="$ANTHROPIC_AUTH_TOKEN" ghcr.io/aahl/claude-code claude'
 ```
 
 ## 🇨🇳 Any Router
@@ -18,7 +18,7 @@ alias claude='docker run --rm -it -v "$(pwd):/app" -e ANTHROPIC_AUTH_TOKEN="$ANT
 ```bash
 export ANTHROPIC_BASE_URL=https://anyrouter.top
 export ANTHROPIC_AUTH_TOKEN=sk-xxxx
-alias claude='docker run --rm -it -v "$(pwd):/app" -e ANTHROPIC_BASE_URL="$ANTHROPIC_BASE_URL" -e ANTHROPIC_AUTH_TOKEN="$ANTHROPIC_AUTH_TOKEN" -e APK_MIRROR=mirrors.ustc.edu.cn -e NPM_REGISTRY=https://registry.npmmirror.com ghcr.nju.edu.cn/aahl/claude-code'
+alias claude='docker run --rm -it -v "$(pwd):/app" -e ANTHROPIC_BASE_URL="$ANTHROPIC_BASE_URL" -e ANTHROPIC_AUTH_TOKEN="$ANTHROPIC_AUTH_TOKEN" -e APK_MIRROR=mirrors.ustc.edu.cn -e NPM_REGISTRY=https://registry.npmmirror.com ghcr.nju.edu.cn/aahl/claude-code claude'
 ```
 
 ## 🔗 Links
