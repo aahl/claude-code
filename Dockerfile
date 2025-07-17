@@ -8,8 +8,8 @@ RUN set -eux; \
     chmod 777 /npm-cache;
 RUN npm install -g @anthropic-ai/claude-code
 
-VOLUME /npm-cache
-ENV npm_config_cache=/npm-cache
+VOLUME /root
+ENV npm_config_cache=/root/npm-cache
 ENV SHELL=/bin/bash
 
 ADD run.sh /
