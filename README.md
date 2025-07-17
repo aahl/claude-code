@@ -24,3 +24,4 @@ alias claude='docker run --rm -it -v "$(pwd):/app" -v claude-code-data:/root -e 
 
 ## 🔗 Links
 - https://anyrouter.top/register?aff=1JNV
+- https://linux.do/t/topic/785059
