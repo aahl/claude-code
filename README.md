@@ -23,5 +23,6 @@ alias claude='docker run --rm -it -v "$(pwd):/app" -v claude-code-data:/root -e 
 ```
 
 ## 🔗 Links
+- [Docker Image Tags](https://github.com/aahl/claude-code/pkgs/container/claude-code/versions?filters[version_type]=tagged)
 - https://anyrouter.top/register?aff=1JNV
 - https://linux.do/t/topic/785059
