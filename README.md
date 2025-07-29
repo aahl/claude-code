@@ -15,6 +15,7 @@ alias claude='docker run --rm -it -v "$(pwd):/app" -v claude-code-data:/root -e 
 
 ## 🇨🇳 GLM 4.5
 使用GLM的最新模型（glm-4.5）驱动您的Claude Code。[申请ApiKey](https://www.bigmodel.cn/invite?icode=EwilDKx13%2FhyODIyL%2BKabHHEaazDlIZGj9HxftzTbt4%3D)
+> GLM还提供了其他很多[免费好用](https://docs.bigmodel.cn/cn/guide/models/free/glm-4.5-flash)的模型！
 ```bash
 # vim ~/.bashrc
 export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
