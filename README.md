@@ -44,6 +44,7 @@ alias claude='docker run --rm -it -v "$(pwd):/app" -v claude-code-data:/root -e 
 
 ## 🔗 Links
 - [Docker Image Tags](https://github.com/aahl/claude-code/pkgs/container/claude-code/versions?filters[version_type]=tagged)
+- [GLM Coding Plan·限时优惠](https://www.bigmodel.cn/claude-code?ic=WTOWFVEJXH)
 - https://www.bigmodel.cn/invite?icode=EwilDKx13%2FhyODIyL%2BKabHHEaazDlIZGj9HxftzTbt4%3D
 - https://docs.bigmodel.cn/cn/guide/develop/claude
 - https://anyrouter.top/register?aff=1JNV
