@@ -3,7 +3,7 @@ FROM ghcr.io/basepkg/alpine
 WORKDIR /app
 
 RUN set -eux; \
-    apk add --no-cache bash nodejs npm; \
+    apk add --no-cache bash curl nodejs npm uv; \
     mkdir -p /root/npm-cache; \
     chmod 777 /root/npm-cache;
 RUN npm install -g @anthropic-ai/claude-code
