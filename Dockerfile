@@ -8,6 +8,7 @@ RUN set -eux; \
     chmod 777 /root/npm-cache;
 RUN npm install -g @anthropic-ai/claude-code
 RUN npm install -g @fission-ai/openspec@latest
+RUN npm install -g happy-coder
 RUN uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
 
 VOLUME /root
