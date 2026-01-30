@@ -3,6 +3,7 @@ FROM ghcr.io/basepkg/alpine
 WORKDIR /app
 
 RUN set -eux; \
+    apk add --no-cache add libgcc libstdc++ ripgrep; \
     apk add --no-cache bash curl wget git nodejs npm uv python3 openssh; \
     mkdir -p /root/npm-cache; \
     chmod 777 /root/npm-cache;
@@ -15,6 +16,7 @@ VOLUME /root
 ENV npm_config_cache=/root/npm-cache
 ENV SHELL=/bin/bash
 ENV PATH=/root/.local/bin:$PATH
+ENV USE_BUILTIN_RIPGREP=0
 
 ADD run.sh /
 ENTRYPOINT ["/run.sh"]
