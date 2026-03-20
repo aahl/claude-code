@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN set -eux; \
     apk add --no-cache libgcc libstdc++ ripgrep; \
-    apk add --no-cache bash curl wget git nodejs npm uv python3 openssh; \
+    apk add --no-cache bash curl wget git nodejs npm uv python3 openssh jq; \
     mkdir -p /root/npm-cache; \
     chmod 777 /root/npm-cache;
 RUN npm install -g @anthropic-ai/claude-code
