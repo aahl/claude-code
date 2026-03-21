@@ -1,6 +1,7 @@
 FROM ghcr.io/basepkg/alpine
 
 WORKDIR /app
+ENV BUN_INSTALL=/usr/local
 
 RUN set -eux; \
     apk add --no-cache libgcc libstdc++ ripgrep; \
@@ -16,8 +17,7 @@ RUN uv tool install specify-cli --from git+https://github.com/github/spec-kit.gi
 VOLUME /root
 ENV npm_config_cache=/root/npm-cache
 ENV SHELL=/bin/bash
-ENV BUN_INSTALL=/root/.bun
-ENV PATH=/root/.local/bin:$BUN_INSTALL/bin:$PATH
+ENV PATH=/root/.local/bin:$PATH
 ENV USE_BUILTIN_RIPGREP=0
 
 ADD run.sh /
