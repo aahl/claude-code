@@ -7,6 +7,7 @@ RUN set -eux; \
     apk add --no-cache bash curl wget git nodejs npm uv python3 openssh jq; \
     mkdir -p /root/npm-cache; \
     chmod 777 /root/npm-cache;
+RUN curl -fsSL https://bun.sh/install | bash
 RUN npm install -g @anthropic-ai/claude-code
 RUN npm install -g happy-coder
 RUN npm install -g @fission-ai/openspec@latest
@@ -15,7 +16,8 @@ RUN uv tool install specify-cli --from git+https://github.com/github/spec-kit.gi
 VOLUME /root
 ENV npm_config_cache=/root/npm-cache
 ENV SHELL=/bin/bash
-ENV PATH=/root/.local/bin:$PATH
+ENV BUN_INSTALL=/root/.bun
+ENV PATH=/root/.local/bin:$BUN_INSTALL/bin:$PATH
 ENV USE_BUILTIN_RIPGREP=0
 
 ADD run.sh /
